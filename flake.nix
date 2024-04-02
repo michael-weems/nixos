@@ -12,10 +12,10 @@
     in
     {
       nixosConfigurations = {
-        default = nixpkgs.lib.nixosSystem {
+        nixos = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            ./hosts/default/configuration.nix
+            ./hosts/nixos/configuration.nix
           ];
         };
       };

@@ -56,6 +56,9 @@
   services.xserver.xkb.variant = "";
   services.xserver.xkb.options = "caps:escape";
 
+  # use xkb config outside of X11
+  console.useXkbConfig = true;
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

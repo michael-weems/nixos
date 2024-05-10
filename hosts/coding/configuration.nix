@@ -52,7 +52,7 @@
   services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
-  services.xserver.layout = "us";
+  services.xserver.xkb.layout = "us";
   services.xserver.xkb.variant = "";
   services.xserver.xkb.options = "caps:swapescape";
 

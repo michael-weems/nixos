@@ -54,7 +54,7 @@
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.variant = "";
-  services.xserver.xkb.options = "caps:swapescape";
+  services.xserver.xkb.options = "caps:escape";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

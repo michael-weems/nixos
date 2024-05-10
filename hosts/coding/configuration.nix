@@ -55,6 +55,7 @@
   services.xserver = {
     layout = "us";
     xkbVariant = "";
+    xkbOptions = "caps:swapescape";
   };
 
   # Enable CUPS to print documents.

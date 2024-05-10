@@ -54,10 +54,6 @@
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.variant = "";
-  services.xserver.xkb.options = "caps:escape";
-
-  # use xkb config outside of X11
-  console.useXkbConfig = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -107,10 +103,27 @@
     gcc
     gnumake
     git
+    keyd
     neovim
     sl
     wget
   ];
+
+ # This setting is to turn CapsLock into Esc.
+  # Don't forget to add `keyd` to the user packages above if you want to use it
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+          main = {
+            capslock = "overload(meta, esc)";
+          };
+        };
+      };
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

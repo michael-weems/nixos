@@ -102,6 +102,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    gcc
     git
     neovim
     sl

@@ -103,6 +103,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     gcc
+    gnumake
     git
     neovim
     sl
